@@ -1,4 +1,3 @@
-<p>app works!</p>
 <div class="app-container">
   <header class="app-header">
     <h1>🌧️ {{ title }}</h1>
@@ -6,19 +5,23 @@
   </header>
 
   <main class="app-main">
+    <!-- Player global com estado sincronizado -->
     <app-sound-player 
       *ngIf="currentlyPlaying"
       [sound]="currentlyPlaying"
-      [isPlaying]="true">
+      [isPlaying]="isPlaying"
+      (play)="onSoundPlay(currentlyPlaying)"
+      (pause)="onPlayerPause()">
     </app-sound-player>
 
+    <!-- Lista de sons -->
     <app-sound-list
-      (soundPlay)="currentlyPlaying = $event"
-      (soundPause)="currentlyPlaying = null">
+      (soundPlay)="onSoundPlay($event)"
+      (soundPause)="onSoundPause()">
     </app-sound-list>
   </main>
 
   <footer class="app-footer">
-    <p>&copy; 2024 Rainy Day App. Todos os direitos reservados.</p>
+    <p>&copy; 2024 Nature Sounds App. Todos os direitos reservados.</p>
   </footer>
 </div>

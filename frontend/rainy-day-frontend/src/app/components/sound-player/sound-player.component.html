@@ -1,1 +1,49 @@
-<p>sound-player works!</p>
+<div class="sound-player" *ngIf="sound">
+  <div class="player-header">
+    <div class="track-info">
+      <h3>{{ sound.name }}</h3>
+      <span class="category">{{ sound.category }}</span>
+    </div>
+    <div class="player-status">
+      <span class="loading" *ngIf="isLoading">🔄 Carregando...</span>
+      <span class="playing-indicator" *ngIf="isPlaying && !isLoading">🎵 Tocando agora</span>
+    </div>
+  </div>
+  
+  <div class="player-controls">
+    <button 
+      class="play-pause-btn" 
+      (click)="togglePlay()"
+      [class.playing]="isPlaying"
+      [disabled]="isLoading">
+      {{ isLoading ? '🔄' : (isPlaying ? '⏸️ Pausar' : '▶️ Reproduzir') }}
+    </button>
+    
+    <div class="volume-control">
+      <label for="volume-slider">🔊 Volume:</label>
+      <input 
+        id="volume-slider"
+        type="range" 
+        min="0" 
+        max="1" 
+        step="0.1" 
+        [value]="volume"
+        (input)="setVolume($any($event.target).valueAsNumber)"
+        class="volume-slider"
+        [disabled]="isLoading">
+      <span class="volume-percent">{{ (volume * 100) | number:'1.0-0' }}%</span>
+    </div>
+  </div>
+  
+  <div class="player-info">
+    <p class="sound-description">{{ sound.description }}</p>
+    <div class="sound-details">
+      <span class="duration">Duração: {{ (sound.duration / 60) | number:'1.0-0' }} minutos</span>
+    </div>
+  </div>
+
+  <div class="wave-visualization" *ngIf="isPlaying && !isLoading">
+    <div class="wave-bar" *ngFor="let bar of [1,2,3,4,5,6,7,8,9,10]"
+         [style.animation-delay]="bar * 0.1 + 's'"></div>
+  </div>
+</div>

@@ -1,1 +1,53 @@
-<p>sound-list works!</p>
+<div class="sound-list">
+  <div class="categories">
+    <h2>Categorias</h2>
+    <div class="category-buttons">
+      <button 
+        *ngFor="let category of categories"
+        [class.active]="selectedCategory === category"
+        (click)="filterByCategory(category)"
+        class="category-btn">
+        {{ category }}
+      </button>
+    </div>
+  </div>
+
+  <div class="sounds-grid" *ngIf="sounds.length > 0; else loading">
+    <div 
+      *ngFor="let sound of sounds" 
+      class="sound-card"
+      [class.playing]="sound === currentlyPlaying">
+      
+      <div class="sound-image">
+        <!-- Imagem placeholder se a URL não carregar -->
+        <img 
+          [src]="sound.imageUrl" 
+          [alt]="sound.name" 
+          (error)="sound.imageUrl = 'https://picsum.photos/300/200?random=' + sound.id"
+        />
+        <button class="play-btn" (click)="togglePlay(sound)">
+          {{ sound === currentlyPlaying ? '⏸️' : '▶️' }}
+        </button>
+      </div>
+      
+      <div class="sound-info">
+        <h3>{{ sound.name }}</h3>
+        <p>{{ sound.description }}</p>
+        <div class="sound-meta">
+          <span class="category">{{ sound.category }}</span>
+          <span class="duration">{{ (sound.duration / 60) | number:'1.0-0' }} min</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #loading>
+    <div class="loading">
+      <p>Carregando sons...</p>
+    </div>
+  </ng-template>
+
+  <div class="no-sounds" *ngIf="sounds.length === 0 && selectedCategory !== 'Todos'">
+    <p>Nenhum som encontrado na categoria "{{ selectedCategory }}"</p>
+  </div>
+</div>
