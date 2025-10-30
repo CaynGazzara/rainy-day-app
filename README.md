@@ -1,150 +1,37 @@
-Nature Sounds App
-This project presents a relaxing nature sounds application that allows users to play ambient sounds in a thematic interface.
+# Nature Sounds App
 
-🔍 Project Overview
-📅 Time Range: Outubro 2024 – Presente
-🧪 Tools: Angular, .NET, GitHub
-🎵 App Preview
-Nature Sounds Interface
+This project presents a relaxing nature sounds application that can be used by the user in a thematic interface.
 
-📁 Project Structure
-rainy-day-app/
-├── backend/
-│   ├── RainyDay.API/
-│   │   ├── Controllers/
-│   │   ├── Models/
-│   │   ├── Services/
-│   │   └── Data/
-│   └── Program.cs
-├── frontend/
-│   └── rainy-day-frontend/
-│       ├── src/app/
-│       │   ├── components/
-│       │   ├── services/
-│       │   ├── models/
-│       │   └── assets/sounds/
-│       └── angular.json
-└── README.md
-🎯 Features
-🌿 Nature Sounds: Chuva, trovões, fogueira, ondas, vento, grilos, gaivotas
+## 🔍 Project Overview
 
-🎛️ Interactive Player: Play/pause, controle de volume, visualização de onda
+- 📅 Time Range: October 2024 – October 2024
+- 🧪 Tools: Angular, Dotnet
 
-📱 Responsive Design: Interface adaptável para desktop e mobile
+## 📊 App Preview
 
-🔍 Category Filter: Filtro por categorias de sons
+![Chess Preview](assets/images/gothic-chess-preview.png)
 
-🎨 Thematic UI: Design moderno com gradientes e animações
+## 📁 Project Contents
 
-🛠️ Technical Stack
-Frontend: Angular (Non-standalone), TypeScript, SCSS
+| Folder     | Description                                   |
+|------------|-----------------------------------------------|
+| `backend`  | Dotnet C# implementation of models and controllers |
+| `frontend` | Angular implementation of services            |
 
-Backend: .NET 8 Web API, Entity Framework Core
+## 🧠 Key Insights
 
-Database: InMemory Database (Development)
+- A simple nature sounds app with personalized ambient audio
 
-Audio: HTML5 Audio API, MP3 files
+## 🔧 Tools Used
 
-Styling: CSS Grid, Flexbox, Gradients
+- C#
+- Dotnet
+- Angular
 
-🎵 Available Sounds
-Sound	Category	Description
-Chuva com Trovão	Tempestade	Chuva intensa com trovões ao fundo
-Fogueira Aconchegante	Fogo	Estalos relaxantes de fogueira
-Ondas do Mar	Água	Ondas suaves quebrando na praia
-Chuva com Vento	Chuva	Chuva suave com vento nas árvores
-Grilos na Noite	Animais	Canto relaxante de grilos na escuridão
-Gaivotas no Litoral	Animais	Gaivotas cantando à beira-mar
-🚀 Getting Started
-Prerequisites
-.NET 8 SDK
+## 🚀 Future Improvements
 
-Node.js 18+
+- Add sound mixing capabilities
 
-Angular CLI
+---
 
-Installation
-bash
-# Clone repository
-git clone https://github.com/CaynGazzara/rainy-day-app.git
-cd rainy-day-app
-
-# Backend
-cd backend/RainyDay.API
-dotnet restore
-dotnet run
-
-# Frontend (new terminal)
-cd frontend/rainy-day-frontend
-npm install
-ng serve
-Access Points
-Frontend: http://localhost:4200
-
-Backend API: http://localhost:5193/api/sounds
-
-🔧 API Endpoints
-Method	Endpoint	Description
-GET	/api/sounds	Get all sounds
-GET	/api/sounds/{id}	Get sound by ID
-GET	/api/sounds/category/{category}	Get sounds by category
-🎨 UI Components
-SoundListComponent: Grid de cards com sons
-
-SoundPlayerComponent: Player com controles e visualização
-
-AppComponent: Layout principal com header/footer
-
-🧠 Key Features Implemented
-✅ Angular Services with HTTP Client
-
-✅ .NET Web API with CORS
-
-✅ InMemory Database with Seed Data
-
-✅ Responsive CSS Grid Layout
-
-✅ Audio Playback with HTML5 Audio API
-
-✅ Category Filtering System
-
-✅ Volume Control Slider
-
-✅ Wave Visualization Animation
-
-✅ Loading States and Error Handling
-
-🚀 Future Improvements
-User Authentication - Salvar sons favoritos
-
-Sound Mixing - Combinar múltiplos sons
-
-Playlists - Criar listas de reprodução personalizadas
-
-Timer Feature - Programar desligamento automático
-
-Mobile App - Versão React Native
-
-Sound Upload - Usuários adicionarem sons próprios
-
-Social Features - Compartilhar playlists
-
-📊 Development Insights
-Architecture: Clean separation between frontend and backend
-
-State Management: Component communication via Input/Output
-
-Audio Handling: Fallback system for reliable playback
-
-UI/UX: Modern design with smooth animations
-
-🌟 Project Highlights
-Clean Code: TypeScript interfaces and C# models
-
-Responsive: Mobile-first design approach
-
-Accessible: Semantic HTML and keyboard navigation
-
-Performance: Lazy loading and efficient state updates
-
-📌 Feel free to fork or explore! Contribute to make nature relaxation accessible to everyone. 🌿🎵
+**📌 Feel free to fork or explore!**
