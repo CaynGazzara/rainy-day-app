@@ -9,7 +9,7 @@ This project presents a relaxing nature sounds application that can be used by t
 
 ## 📊 App Preview
 
-![Chess Preview](assets/images/gothic-chess-preview.png)
+![Nature Sounds Preview](assets/images/gothic-chess-preview.png)
 
 ## 📁 Project Contents
 
@@ -35,3 +35,4 @@ This project presents a relaxing nature sounds application that can be used by t
 ---
 
 **📌 Feel free to fork or explore!**
+
