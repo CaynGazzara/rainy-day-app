@@ -1,0 +1,24 @@
+<p>app works!</p>
+<div class="app-container">
+  <header class="app-header">
+    <h1>🌧️ {{ title }}</h1>
+    <p>Encontre os sons perfeitos para relaxar e se concentrar</p>
+  </header>
+
+  <main class="app-main">
+    <app-sound-player 
+      *ngIf="currentlyPlaying"
+      [sound]="currentlyPlaying"
+      [isPlaying]="true">
+    </app-sound-player>
+
+    <app-sound-list
+      (soundPlay)="currentlyPlaying = $event"
+      (soundPause)="currentlyPlaying = null">
+    </app-sound-list>
+  </main>
+
+  <footer class="app-footer">
+    <p>&copy; 2024 Rainy Day App. Todos os direitos reservados.</p>
+  </footer>
+</div>

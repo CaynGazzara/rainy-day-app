@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { App } from './app';
+import { SoundPlayer } from './sound-player';
 
-describe('App', () => {
-  let component: App;
-  let fixture: ComponentFixture<App>;
+describe('SoundPlayer', () => {
+  let component: SoundPlayer;
+  let fixture: ComponentFixture<SoundPlayer>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [App]
+      declarations: [SoundPlayer]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(App);
+    fixture = TestBed.createComponent(SoundPlayer);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

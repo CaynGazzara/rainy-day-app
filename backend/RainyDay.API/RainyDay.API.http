@@ -1,6 +1,0 @@
-@RainyDay.API_HostAddress = http://localhost:5210
-
-GET {{RainyDay.API_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
